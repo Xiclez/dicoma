@@ -463,7 +463,7 @@ h6 {
 #hero {
   width: 100%;
   height: 75vh;
-  background: url("../img/hero-bg.jpg") top left;
+  background: url("../img/herobg.webp") top left;
   background-size: cover;
   position: relative;
 }
@@ -984,29 +984,36 @@ section {
 #coverage {
   overflow: hidden; /* Oculta el contenido que se desborda */
 }
-.coverage-track .item img {
-  width: 200px; /* Ancho fijo de 200px */
-  height: 200px; /* Altura fija de 200px */
-  object-fit: contain; /* Ajusta la imagen para que quepa dentro del contenedor manteniendo la relación de aspecto */
-}
 
 .coverage-track {
   display: flex; /* Hace que los elementos se coloquen en línea */
-  width: 300%; /* Ancho suficiente para todas las imágenes */
-  animation: scroll 20s linear infinite; /* Animación de desplazamiento */
+  width: 200%; /* Ancho suficiente para todas las imágenes duplicadas */
+  animation: scroll 10s linear infinite; /* Animación de desplazamiento continuo */
 }
 
 .coverage-track .item {
   flex: 0 0 auto; /* Evita que los elementos se encojan */
-  width: 33.33%; /* Ancho de cada imagen (ajusta según la cantidad) */
+  width: 10%; /* Ajusta el ancho de cada imagen para mostrar más imágenes a la vez */
   margin-right: 20px; /* Espacio entre imágenes */
   text-align: center; /* Centra el texto debajo de la imagen */
 }
 
+.coverage-track .item img {
+  width: 100px; /* Ancho reducido de las imágenes */
+  height: 100px; /* Altura reducida de las imágenes */
+  object-fit: contain; /* Ajusta la imagen para que quepa dentro del contenedor manteniendo la relación de aspecto */
+}
+
+.coverage-track .item .label {
+  margin-top: 5px; /* Espacio entre la imagen y la etiqueta */
+  font-size: 14px; /* Tamaño de fuente para las etiquetas */
+}
+
 @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); } /* Desplaza el ancho completo */
+  100% { transform: translateX(-50%); } /* Desplaza el ancho completo duplicado */
 }
+
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
